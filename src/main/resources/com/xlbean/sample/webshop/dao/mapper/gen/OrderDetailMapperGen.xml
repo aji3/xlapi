@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlbean.sample.webshop.dao.mapper.gen.OrderDetailMapperGen">
+
+    <resultMap id="BaseResultMap" type="com.xlbean.sample.webshop.entity.OrderDetail">
+        <result column="orderId" property="orderId" />
+        <result column="orderDetailId" property="orderDetailId" />
+        <result column="productId" property="productId" />
+        <result column="quantity" property="quantity" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        orderId, orderDetailId, productId, quantity  
+    </sql>
+
+    <select id="selectOne" resultMap="BaseResultMap">
+        select
+        orderId, orderDetailId, productId, quantity  
+        from `WebShop`.`OrderDetail` 
+        where
+            orderId = #{orderId} 
+            AND orderDetailId = #{orderDetailId} 
+    </select>
+
+    <select id="selectList" resultMap="BaseResultMap">
+        select
+        orderId, orderDetailId, productId, quantity  
+        from `WebShop`.`OrderDetail` 
+        where
+            1 = 1
+            AND orderId = #{orderId} 
+ 
+    </select>
+
+    <delete id="delete">
+        delete from `WebShop`.`OrderDetail` 
+        where
+            orderId = #{orderId} 
+            ANDorderDetailId = #{orderDetailId} 
+    </delete>
+  
+    <insert id="insert" parameterType="com.xlbean.sample.webshop.entity.OrderDetail">
+        insert into `WebShop`.`OrderDetail` (
+            orderId, 
+            orderDetailId, 
+            productId, 
+            quantity 
+        ) values (
+            #{record.orderId}, 
+            #{record.orderDetailId}, 
+            #{record.productId}, 
+            #{record.quantity} 
+        )
+    </insert>
+
+    <update id="update" parameterType="com.xlbean.sample.webshop.entity.OrderDetail">
+        update `WebShop`.`OrderDetail` 
+        <set>
+            orderId = #{record.orderId}, 
+            orderDetailId = #{record.orderDetailId}, 
+            productId = #{record.productId}, 
+            quantity = #{record.quantity} 
+        </set>
+        where
+             orderId = #{record.orderId} 
+            AND orderDetailId = #{record.orderDetailId} 
+    </update>
+    
+    <update id="updateSelective" parameterType="com.xlbean.sample.webshop.entity.OrderDetail">
+        update `WebShop`.`OrderDetail` 
+        <set>
+            <if test="record.orderId != null">orderId = #{record.orderId},</if>
+            <if test="record.orderDetailId != null">orderDetailId = #{record.orderDetailId},</if>
+            <if test="record.productId != null">productId = #{record.productId},</if>
+            <if test="record.quantity != null">quantity = #{record.quantity}</if>
+        </set>
+        where
+             orderId = #{record.orderId} 
+            AND orderDetailId = #{record.orderDetailId} 
+    </update>
+
+    <select id="generateOrderId" resultType="int">
+        select ifnull(max(orderId) + 1,1) from `WebShop`.`OrderDetail` 
+    </select>
+
+    <select id="generateOrderDetailId" resultType="int">
+        select ifnull(max(orderDetailId) + 1,1) from `WebShop`.`OrderDetail` 
+        where 
+            orderId = #{orderId} 
+    </select>
+
+
+</mapper>
