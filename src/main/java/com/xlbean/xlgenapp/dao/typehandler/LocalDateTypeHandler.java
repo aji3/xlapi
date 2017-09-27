@@ -1,4 +1,4 @@
-package com.xlbean.xlgenapp.dao;
+package com.xlbean.xlgenapp.dao.typehandler;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;

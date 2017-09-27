@@ -19,11 +19,11 @@ public class WebConfig extends WebMvcConfigurerAdapter{
         registry.addInterceptor(new LogInterceptor());
     }
     
-    @Override
-    public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
-        converters.add(0, new LoggableMappingJackson2HttpMessageConverter());
-        super.extendMessageConverters(converters);
-    }
+//    @Override
+//    public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
+//        converters.add(0, new LoggableMappingJackson2HttpMessageConverter());
+//        super.extendMessageConverters(converters);
+//    }
     
     @Override
     public void addCorsMappings(CorsRegistry registry) {
