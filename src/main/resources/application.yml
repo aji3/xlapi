@@ -11,5 +11,5 @@ spring:
 #
 mybatis:
   mapper-locations: "classpath:com/xlbean/**/dao/mapper/**/*.xml"
-  type-handlers-package: "com.xlbean.xlgenapp.dao.typehandler"
+  type-handlers-package: "org.xlbean.xlapi.dao.typehandler"
    
