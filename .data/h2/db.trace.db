@@ -1,198 +1,10 @@
-2017-04-29 00:08:18 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            1 = 1 "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            1 = 1 "; expected "identifier"; SQL statement:
-select
-        orderId, customerId, orderDatetime, totalPrice  
-        from WebShop.Order 
-        where
-            1 = 1 [42001-193]
-2017-04-29 00:08:56 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            1 = 1 "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            1 = 1 "; expected "identifier"; SQL statement:
-select
-        orderId, customerId, orderDatetime, totalPrice  
-        from WebShop.Order 
-        where
-            1 = 1 [42001-193]
-2017-04-29 00:09:28 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] "; expected "identifier"; SQL statement:
-select
-        orderId, customerId, orderDatetime, totalPrice  
-        from WebShop.Order [42001-193]
-2017-04-29 00:10:24 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE
-FROM WEBSHOP.ORDER[*] "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE
-FROM WEBSHOP.ORDER[*] "; expected "identifier"; SQL statement:
-select
-orderId, customerId, orderDatetime, totalPrice
-from WebShop.Order [42001-193]
-2017-04-29 00:10:25 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE
-FROM WEBSHOP.ORDER[*] "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE
-FROM WEBSHOP.ORDER[*] "; expected "identifier"; SQL statement:
-select
-orderId, customerId, orderDatetime, totalPrice
-from WebShop.Order [42001-193]
-2017-04-29 00:10:36 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; expected "identifier"; SQL statement:
-select
-        orderId, customerId, orderDatetime, totalPrice  
-        from WebShop.Order 
-        where
-            orderId = ? [42001-193]
-2017-04-29 00:11:53 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; expected "identifier"; SQL statement:
-select
-        orderId, customerId, orderDatetime, totalPrice  
-        from WebShop.Order 
-        where
-            orderId = ? [42001-193]
-2017-04-29 00:12:56 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; expected "identifier"; SQL statement:
-select
-        orderId, customerId, orderDatetime, totalPrice  
-        from WebShop.Order 
-        where
-            orderId = ? [42001-193]
-2017-04-29 00:12:57 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; expected "identifier"; SQL statement:
-select
-        orderId, customerId, orderDatetime, totalPrice  
-        from WebShop.Order 
-        where
-            orderId = ? [42001-193]
-2017-04-29 00:13:05 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT * FROM WEBSHOP.ORDER[*] "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT * FROM WEBSHOP.ORDER[*] "; expected "identifier"; SQL statement:
-select * from WebShop.Order [42001-193]
-2017-04-29 00:13:14 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT
-        ORDERID, CUSTOMERID, ORDERDATETIME, TOTALPRICE  
-        FROM WEBSHOP.ORDER[*] 
-        WHERE
-            ORDERID = ? "; expected "identifier"; SQL statement:
-select
-        orderId, customerId, orderDatetime, totalPrice  
-        from WebShop.Order 
-        where
-            orderId = ? [42001-193]
-2017-04-29 00:20:09 database: wrong user or password; user: ""
-org.h2.message.DbException: ユーザ名またはパスワードが不正です
-Wrong user name or password [28000-194]
-	at org.h2.message.DbException.get(DbException.java:179)
-	at org.h2.message.DbException.get(DbException.java:155)
-	at org.h2.message.DbException.get(DbException.java:144)
-	at org.h2.engine.Engine.openSession(Engine.java:104)
-	at org.h2.engine.Engine.openSession(Engine.java:176)
-	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
-	at org.h2.engine.Engine.createSession(Engine.java:137)
-	at org.h2.engine.Engine.createSession(Engine.java:27)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:354)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:100)
-	at org.h2.Driver.connect(Driver.java:69)
-	at org.h2.server.web.WebServer.getConnection(WebServer.java:735)
-	at org.h2.server.web.WebApp.test(WebApp.java:885)
-	at org.h2.server.web.WebApp.process(WebApp.java:220)
-	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
-	at org.h2.server.web.WebThread.process(WebThread.java:133)
-	at org.h2.server.web.WebThread.run(WebThread.java:89)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.h2.jdbc.JdbcSQLException: ユーザ名またはパスワードが不正です
-Wrong user name or password [28000-194]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
-	... 19 more
-2017-04-29 00:22:02 jdbc[12]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT * FROM WEBSHOP.ORDER[*] "; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT * FROM WEBSHOP.ORDER[*] "; expected "identifier"; SQL statement:
-select * from WebShop.Order [42001-193]
-2017-04-29 00:23:15 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT * FROM WEBSHOP.ORDER[*]"; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT * FROM WEBSHOP.ORDER[*]"; expected "identifier"; SQL statement:
-SELECT * FROM WEBSHOP.ORDER [42001-194]
-2017-04-29 00:23:27 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT * FROM WEBSHOP.'ORDER'[*]"; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT * FROM WEBSHOP.'ORDER'[*]"; expected "identifier"; SQL statement:
-SELECT * FROM WEBSHOP.'ORDER' [42001-194]
-2017-04-29 00:23:35 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT * FROM 'WEBSHOP'[*].'ORDER'"; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT * FROM 'WEBSHOP'[*].'ORDER'"; expected "identifier"; SQL statement:
-SELECT * FROM 'WEBSHOP'.'ORDER' [42001-194]
-2017-04-29 00:23:57 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "SELECT * FROM 'WEBSHOP'[*].""ORDER"""; 期待されるステートメント "identifier"
-Syntax error in SQL statement "SELECT * FROM 'WEBSHOP'[*].""ORDER"""; expected "identifier"; SQL statement:
-SELECT * FROM 'WEBSHOP'."ORDER" [42001-194]
-2017-04-29 00:25:59 database: flush
-org.h2.message.DbException: 一般エラー: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/workspace/exceltable/xlgenapp/.data/h2/db.mv.db [1.4.193/7]"
-General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/workspace/exceltable/xlgenapp/.data/h2/db.mv.db [1.4.193/7]" [50000-193]
+2017-11-04 10:56:05 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: SQLステートメントに文法エラーがあります "CREATE DATABASE[*] IF NOT EXISTS ""WEBSHOP"" "; 期待されるステートメント "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"
+Syntax error in SQL statement "CREATE DATABASE[*] IF NOT EXISTS ""WEBSHOP"" "; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+CREATE DATABASE IF NOT EXISTS `WebShop` [42001-193]
+2017-11-04 11:02:15 database: flush
+org.h2.message.DbException: 一般エラー: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/git/xlapi/.data/h2/db.mv.db [1.4.193/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/git/xlapi/.data/h2/db.mv.db [1.4.193/7]" [50000-193]
 	at org.h2.message.DbException.get(DbException.java:168)
 	at org.h2.message.DbException.convert(DbException.java:295)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
@@ -216,10 +28,10 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.h2.Driver.connect(Driver.java:69)
 	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
 	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:732)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:664)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:479)
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:718)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:650)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:468)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:143)
 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
 	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
@@ -317,11 +129,11 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151)
 	at org.xlbean.xlapi.GenApp.main(GenApp.java:22)
-Caused by: org.h2.jdbc.JdbcSQLException: 一般エラー: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/workspace/exceltable/xlgenapp/.data/h2/db.mv.db [1.4.193/7]"
-General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/workspace/exceltable/xlgenapp/.data/h2/db.mv.db [1.4.193/7]" [50000-193]
+Caused by: org.h2.jdbc.JdbcSQLException: 一般エラー: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/git/xlapi/.data/h2/db.mv.db [1.4.193/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/git/xlapi/.data/h2/db.mv.db [1.4.193/7]" [50000-193]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 124 more
-Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/workspace/exceltable/xlgenapp/.data/h2/db.mv.db [1.4.193/7]
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/tanikawa/git/xlapi/.data/h2/db.mv.db [1.4.193/7]
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:765)
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:348)

@@ -8,13 +8,13 @@
         <result column="price" property="price" />
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="baseColumns">
         productId, name, price  
     </sql>
 
     <select id="selectOne" resultMap="BaseResultMap">
         select
-        productId, name, price  
+        <include refid="baseColumns" />
         from `WebShop`.`Product` 
         where
             productId = #{productId} 
@@ -22,11 +22,17 @@
 
     <select id="selectList" resultMap="BaseResultMap">
         select
-        productId, name, price  
+        <include refid="baseColumns" /> 
         from `WebShop`.`Product` 
         where
             1 = 1
  
+        <if test="limit != null and offset != null">
+            limit #{offset}, #{limit}
+        </if>
+        <if test="limit != null and offset == null">
+            limit #{limit}
+        </if>
     </select>
 
     <delete id="delete">

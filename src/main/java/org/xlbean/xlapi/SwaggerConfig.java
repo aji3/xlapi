@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
+import com.google.common.base.Predicate;
+
 import springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -21,17 +23,18 @@ public class SwaggerConfig {
     @Bean
     public Docket swaggerSpringMvcPlugin() {
         return new Docket(DocumentationType.SWAGGER_2)
-                        .groupName("webshop-api")
+//                        .groupName("webshop-api")
                         .select()
-                        .apis(RequestHandlerSelectors.any())
-                        .paths(PathSelectors.any())
+                        .apis(RequestHandlerSelectors.basePackage("org.xlbean.sample.webshop.api"))
+                        .paths(paths())
                         .build()
                         .apiInfo(apiInfo());
     }
 
-//    private Predicate<String> paths() {
-//        return regex("/customers.*");
-//    }
+    private Predicate<String> paths() {
+//        return Predicates.not(PathSelectors.regex("/basic-error-controller.*"));
+    	return PathSelectors.any();
+    }
 
     private ApiInfo apiInfo() {
         ApiInfo apiInfo = new ApiInfo(

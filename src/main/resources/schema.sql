@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS `WebShop`;
+CREATE SCHEMA IF NOT EXISTS `WebShop`;
 
 CREATE TABLE IF NOT EXISTS `WebShop`.`Customer` (
     `customerId` int(11) NOT NULL,

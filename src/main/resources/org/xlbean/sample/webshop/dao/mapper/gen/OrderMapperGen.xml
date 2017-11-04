@@ -9,13 +9,13 @@
         <result column="totalPrice" property="totalPrice" />
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="baseColumns">
         orderId, customerId, orderDatetime, totalPrice  
     </sql>
 
     <select id="selectOne" resultMap="BaseResultMap">
         select
-        orderId, customerId, orderDatetime, totalPrice  
+        <include refid="baseColumns" />
         from `WebShop`.`Order` 
         where
             orderId = #{orderId} 
@@ -23,11 +23,17 @@
 
     <select id="selectList" resultMap="BaseResultMap">
         select
-        orderId, customerId, orderDatetime, totalPrice  
+        <include refid="baseColumns" /> 
         from `WebShop`.`Order` 
         where
             1 = 1
  
+        <if test="limit != null and offset != null">
+            limit #{offset}, #{limit}
+        </if>
+        <if test="limit != null and offset == null">
+            limit #{limit}
+        </if>
     </select>
 
     <delete id="delete">

@@ -9,13 +9,13 @@
         <result column="quantity" property="quantity" />
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="baseColumns">
         customerId, cartDetailId, productId, quantity  
     </sql>
 
     <select id="selectOne" resultMap="BaseResultMap">
         select
-        customerId, cartDetailId, productId, quantity  
+        <include refid="baseColumns" />
         from `WebShop`.`Cart` 
         where
             customerId = #{customerId} 
@@ -24,12 +24,18 @@
 
     <select id="selectList" resultMap="BaseResultMap">
         select
-        customerId, cartDetailId, productId, quantity  
+        <include refid="baseColumns" /> 
         from `WebShop`.`Cart` 
         where
             1 = 1
             AND customerId = #{customerId} 
  
+        <if test="limit != null and offset != null">
+            limit #{offset}, #{limit}
+        </if>
+        <if test="limit != null and offset == null">
+            limit #{limit}
+        </if>
     </select>
 
     <delete id="delete">
