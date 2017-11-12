@@ -12,15 +12,28 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 
 @ControllerAdvice
 public class BaseExceptionHandler {
+	
+	public enum ErrorCause {UNKNOWN, FORMAT_EXCEPTION};
 
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler({ MethodArgumentTypeMismatchException.class, IllegalArgumentException.class, })
 	@ResponseBody
 	public Map<String, Object> handleValidationError(Exception e) {
-		e.printStackTrace();
-		Map<String, Object> errorMap = new HashMap<String, Object>();
-		errorMap.put("message", "Invalid Request");
-		return errorMap;
+		ErrorMessageBuilder builder = new ErrorMessageBuilder();
+		builder.message("Invalid Request");
+		if (e instanceof MethodArgumentTypeMismatchException) {
+			MethodArgumentTypeMismatchException exp = (MethodArgumentTypeMismatchException) e;
+			String field = exp.getName();
+			ErrorCause cause = ErrorCause.UNKNOWN;
+			String detail = exp.getMessage();
+			if (exp.getCause() instanceof NumberFormatException) {
+				cause = ErrorCause.FORMAT_EXCEPTION;
+			}
+			builder.error(field, cause, detail);
+		} else {
+			e.printStackTrace();
+		}
+		return builder.build();
 	}
 
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)

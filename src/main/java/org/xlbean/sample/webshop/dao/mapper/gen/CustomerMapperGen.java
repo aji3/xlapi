@@ -10,17 +10,17 @@ import org.xlbean.sample.webshop.entity.Customer;
 @Mapper
 public interface CustomerMapperGen {
 
-    Customer selectOne(Integer customerId);
+    Customer selectOne(@Param("customerId") Integer customerId);
 
-    List<Customer> selectList(@Param("offset")Integer offset, @Param("limit")Integer limit);
+    List<Customer> selectList(@Param("offset") Integer offset, @Param("limit") Integer limit);
 
-    void insert(@Param("record")Customer record);
+    void insert(@Param("record") Customer record);
 
-    void update(@Param("record")Customer record);
+    void update(@Param("record") Customer record);
 
-    void updateSelective(@Param("record")Customer record);
+    void updateSelective(@Param("record") Customer record);
 
-    void delete(Integer customerId);
+    void delete(@Param("customerId") Integer customerId);
 
     Integer generateCustomerId();
 

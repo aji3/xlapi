@@ -10,17 +10,17 @@ import org.xlbean.sample.webshop.entity.Order;
 @Mapper
 public interface OrderMapperGen {
 
-    Order selectOne(Integer orderId);
+    Order selectOne(@Param("orderId") Integer orderId);
 
-    List<Order> selectList(@Param("offset")Integer offset, @Param("limit")Integer limit);
+    List<Order> selectList(@Param("offset") Integer offset, @Param("limit") Integer limit);
 
-    void insert(@Param("record")Order record);
+    void insert(@Param("record") Order record);
 
-    void update(@Param("record")Order record);
+    void update(@Param("record") Order record);
 
-    void updateSelective(@Param("record")Order record);
+    void updateSelective(@Param("record") Order record);
 
-    void delete(Integer orderId);
+    void delete(@Param("orderId") Integer orderId);
 
     Integer generateOrderId();
 

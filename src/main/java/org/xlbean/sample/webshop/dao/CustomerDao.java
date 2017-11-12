@@ -16,6 +16,7 @@ public class CustomerDao {
     private CustomerMapper mapper;
     
     public Customer selectOne(Integer customerId) {
+    	System.out.println(mapper.select(customerId));
         return mapper.selectOne(customerId);
     }
     
